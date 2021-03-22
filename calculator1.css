@@ -1,0 +1,53 @@
+.center{
+	background-color: white;
+	border-radius: 50%;
+	height: 600px;
+	margin: auto;
+	width: 600px;
+}
+form{
+	background-color: darkslateblue;
+	box-shadow: 4px 4px black;
+	margin: 40px auto;
+	padding: 40px 0 30px 40px;
+	width: 550px;
+	height: 650px;
+}
+.btn{
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	height: 90px;
+	margin: 12px 5px 12px 25px;
+	width: 90px;
+	font-size: x-large;
+}
+.btn,#display,form{
+	border-radius: 25px;
+}
+
+.number{
+	background-color: skyblue;
+	box-shadow: 0 4px cadetblue;
+	color: white;
+	font-size: X-large;
+}
+#display{
+	outline: none;
+	background-color: skyblue;
+	height: 100px;
+	width: 500px;
+	color: white;
+	font-size: x-large;
+}
+#delete{
+	margin-right: 10px;
+	font-size: x-large;
+}
+h1{
+	color: white;
+padding-left: 10px;
+padding-top: 10px;
+margin-right: 60px;
+float: right;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#Show{
+				width: 250px;
+				height:100px;
+				background-color: aliceblue;
+				margin: auto;
+				border: groove cadetblue 10px;
+				
+			}
+			h1{
+				padding-left: 75px;
+				padding-top: 5px;
+				padding-bottom: 25px;
+			}
+			#start{
+				margin-left: 700px;
+				margin-top: 10px;
+				margin-right: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="Show">
+		<h1 id="show"></h1>
+		</div>
+		<button id="start" onclick="Rolling()">开始</button>
+		<button id="stop" onclick="CatchName()">停止</button>
+		<div id="History">
+			<h2 >让我们看看有哪些幸运鹅鹅鹅鹅：</h2>
+			<h2 id="history"></h2>
+		</div>
+		<script type="text/javascript">
+			var myVar;
+			var myClass=new Array("王昭君","安琪拉","上官婉儿","干将莫邪","诸葛亮");
+			var j=0;
+            var m=new Array();m[0]="";
+			function CatchName()
+			{
+				var i=Math.ceil(Math.random()*myClass.length-1);
+				if(myClass.length==0) document.getElementById("show").innerHTML="点名结束！";
+				else
+				document.getElementById("show").innerHTML=myClass[i];
+				m.unshift(myClass[i]);  //在数组的首部插入元素
+				var str=m.toString();   //变成字符串输出
+				document.getElementById("history").innerHTML=str;
+				myClass.splice(i,1);    //删除已经抽到的数组元素
+				clearInterval(myVar);
+			}
+			function Rolling()
+			{
+				clearInterval(myVar);   //在调用函数之前先把之前调用过的清空以免发生意外
+				myVar=setInterval(Roll,100);
+				
+				}
+			function Roll(){
+				
+					document.getElementById("show").innerHTML=myClass[j++];
+					if(j==5) j=0;
+					
+				}
+		</script>
+	</body>
+</html>
